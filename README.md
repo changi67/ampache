@@ -20,7 +20,7 @@ Recommended Version
 -------------------
 
 Currently, the recommended version is [git HEAD](https://github.com/ampache-doped/ampache-doped/archive/master.tar.gz).
-[![Build Status](https://api.travis-ci.org/ampache-doped/ampache.png?branch=master)](https://travis-ci.org/ampache-doped/ampache)
+[![Build Status](https://api.travis-ci.org/ampache-doped/ampache-doped.png?branch=master)](https://travis-ci.org/ampache-doped/ampache-doped)
 
 Requirements
 ------------
@@ -114,7 +114,7 @@ for more instructions.
 * Italian	(it_IT)
 * French	(fr_FR)
 * Swedish	(sv_SE)
-* Japanese	(ja_JP) 
+* Japanese	(ja_JP)
 * Catalan	(ca_ES)
 * Russian	(ru_RU)
 * Czech (cs_CZ)
