@@ -19,7 +19,9 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
  */
-require $prefix . '/templates/install_header.inc.php';
+$sTitle = T_("Ampache :: For the love of Music - Install");
+$sHeadTitle = T_('Ampache Installation');
+require $prefix . '/templates/tiny_header.inc.php';
 ?>
 <?php if (!defined('INSTALL')) { exit; } ?>
         <div class="page-header requirements">
@@ -37,30 +39,31 @@ require $prefix . '/templates/install_header.inc.php';
                 <?php echo sprintf(T_("Once you have ensured that the above requirements are met please fill out the information below. You will only be asked for the required config values. If you would like to make changes to your Ampache install at a later date simply edit %s"), $prefix . '/config/ampache-doped.cfg.php'); ?>
             </p>
         </div>
-<table class="table" cellspacing="0" cellpadding="0">
-    <tr>
-        <th><?php echo T_('CHECK'); ?></th>
-        <th><?php echo T_('STATUS'); ?></th>
-        <th><?php echo T_('DESCRIPTION'); ?></th>
-    </tr>
-    <?php require $prefix . '/templates/show_test_table.inc.php'; ?>
-    <tr>
-        <td><?php echo sprintf(T_('%s is readable'), 'ampache-doped.cfg.php.dist'); ?></td>
-        <td><?php echo debug_result(is_readable($prefix . '/config/ampache-doped.cfg.php.dist')); ?></td>
-        <td><?php echo T_('This tests whether the configuration template can be read.'); ?></td>
-    </tr>
-    <tr>
-        <td><?php echo sprintf(T_('%s is readable'), 'ampache.sql'); ?></td>
-        <td><?php echo debug_result(is_readable($prefix . '/sql/ampache.sql')); ?></td>
-        <td><?php echo T_('This tests whether the file needed to initialise the database structure is available.'); ?></td>
-    </tr>
-    <tr>
-        <td><?php echo T_('ampache-doped.cfg.php is writable'); ?></td>
-        <td><?php echo debug_result(check_config_writable()); ?></td>
-        <td><?php echo T_('This tests whether PHP can write to config/. This is not strictly necessary, but will help streamline the installation process.'); ?></td>
-    </tr>
-</table>
-<form role="form" method="post" action="<?php echo $web_path . "/install.php?action=init"; ?>" enctype="multipart/form-data" >
-    <input type="hidden" name="htmllang" value="<?php echo $htmllang ?>"/>
-    <button type="submit" class="btn btn-warning"><?php echo T_('Continue'); ?></button>
-</form>
+        <table class="table" cellspacing="0" cellpadding="0">
+            <tr>
+                <th><?php echo T_('CHECK'); ?></th>
+                <th><?php echo T_('STATUS'); ?></th>
+                <th><?php echo T_('DESCRIPTION'); ?></th>
+            </tr>
+            <?php require $prefix . '/templates/show_test_table.inc.php'; ?>
+            <tr>
+                <td><?php echo sprintf(T_('%s is readable'), 'ampache-doped.cfg.php.dist'); ?></td>
+                <td><?php echo debug_result(is_readable($prefix . '/config/ampache-doped.cfg.php.dist')); ?></td>
+                <td><?php echo T_('This tests whether the configuration template can be read.'); ?></td>
+            </tr>
+            <tr>
+                <td><?php echo sprintf(T_('%s is readable'), 'ampache.sql'); ?></td>
+                <td><?php echo debug_result(is_readable($prefix . '/sql/ampache.sql')); ?></td>
+                <td><?php echo T_('This tests whether the file needed to initialise the database structure is available.'); ?></td>
+            </tr>
+            <tr>
+                <td><?php echo T_('ampache-doped.cfg.php is writable'); ?></td>
+                <td><?php echo debug_result(check_config_writable()); ?></td>
+                <td><?php echo T_('This tests whether PHP can write to config/. This is not strictly necessary, but will help streamline the installation process.'); ?></td>
+            </tr>
+        </table>
+        <form role="form" method="post" action="<?php echo $web_path . "/install.php?action=init"; ?>" enctype="multipart/form-data" >
+            <input type="hidden" name="htmllang" value="<?php echo $htmllang ?>"/>
+            <button type="submit" class="btn btn-warning"><?php echo T_('Continue'); ?></button>
+        </form>
+<?php require $prefix . '/templates/tiny_footer.inc.php'; ?>

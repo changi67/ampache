@@ -20,7 +20,9 @@
  *
  */
 
-require $prefix . '/templates/install_header.inc.php';
+$sTitle = T_("Ampache :: For the love of Music - Install");
+$sHeadTitle = T_('Ampache Installation');
+require $prefix . '/templates/tiny_header.inc.php';
 ?>
 <div class="jumbotron">
     <h1><?php echo T_('Install progress'); ?></h1>
@@ -69,4 +71,4 @@ require $prefix . '/templates/install_header.inc.php';
     <button type="submit" class="btn btn-warning"><?php echo T_('Create Account'); ?></button>
 </div>
 </form>
-<?php require $prefix . '/templates/install_footer.inc.php'; ?>
+<?php require $prefix . '/templates/tiny_footer.inc.php'; ?>

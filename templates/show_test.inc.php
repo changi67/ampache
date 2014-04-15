@@ -19,33 +19,18 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
  */
+
+$sTitle = T_("Ampache :: For the love of Music");
+$sHeadTitle = T_('Ampache -- Debug Page');
+require $prefix . '/templates/tiny_header.inc.php';
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
-<html lang="en-US">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Ampache -- Debug Page</title>
-        <link href="modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="modules/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="templates/install-doped.css" type="text/css" media="screen" />
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="themes/reborn/images/ampache.png" title="Ampache" alt="Ampache">
-                    <?php echo T_('Ampache'); ?> - For the love of Music
-                </a>
-            </div>
-        </div>
         <div class="container" role="main">
-        <div class="page-header requirements">
-            <h1><?php echo T_('Ampache Debug'); ?></h1>
-        </div>
-        <div class="well">
-            <p><?php echo T_('You may have reached this page because a configuration error has occured. Debug information is below.'); ?></p>
-        </div>
-        <div>
+            <div class="page-header requirements">
+                <h1><?php echo T_('Ampache Debug'); ?></h1>
+            </div>
+            <div class="well">
+                <p><?php echo T_('You may have reached this page because a configuration error has occured. Debug information is below.'); ?></p>
+            </div>
             <table class="table" cellpadding="3" cellspacing="0">
                 <tr>
                     <th><?php echo T_('CHECK'); ?></th>
@@ -54,6 +39,4 @@
                 </tr>
                 <?php require $prefix . '/templates/show_test_table.inc.php'; ?>
             </table>
-        </div>
-    </body>
-</html>
+<?php require $prefix . '/templates/tiny_footer.inc.php'; ?>

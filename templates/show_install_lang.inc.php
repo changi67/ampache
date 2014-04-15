@@ -20,9 +20,10 @@
  *
  */
 
-require $prefix . '/templates/install_header.inc.php';
+$sTitle = T_("Ampache :: For the love of Music - Install");
+$sHeadTitle = T_('Ampache Installation');
+require $prefix . '/templates/tiny_header.inc.php';
 ?>
-        <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <h1 id="headerlogo"><img src="<?php echo $web_path; ?>/themes/reborn/images/ampache.png" title="Ampache" alt="Ampache"><?php echo T_('Ampache Installation'); ?></h1>
         </div>
@@ -49,4 +50,4 @@ require $prefix . '/templates/install_header.inc.php';
             </div>
             <button type="submit" class="btn btn-warning"><?php echo T_('Start configuration'); ?></button>
         </form>
-<?php require $prefix . '/templates/install_footer.inc.php'; ?>
+<?php require $prefix . '/templates/tiny_footer.inc.php'; ?>

@@ -19,27 +19,12 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
  */
+$prefix = AmpConfig::get('prefix');
+$sTitle = T_("Ampache :: 403");
+$sHeadTitle = T_('Ampache');
+$htmllang = 'en_US';
+require $prefix . '/templates/tiny_header.inc.php';
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
-<html lang="en-US">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Ampache -- Debug Page</title>
-        <link rel="shortcut icon" href="<?php echo $web_path; ?>/favicon.ico" />
-        <link href="<?php echo AmpConfig::get('web_path'); ?>/modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?php echo AmpConfig::get('web_path'); ?>/modules/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="<?php echo AmpConfig::get('web_path'); ?>/templates/install-doped.css" type="text/css" media="screen" />
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="<?php echo AmpConfig::get('web_path'); ?>/themes/reborn/images/ampache.png" title="Ampache" alt="Ampache">
-                    <?php echo T_('Ampache'); ?> - For the love of Music
-                </a>
-            </div>
-        </div>
-        <div class="container" role="main">
             <div class="jumbotron">
                 <h1><?php echo T_('Access Denied'); ?></h1>
                 <p><?php echo T_('This event has been logged.'); ?></p>
@@ -53,6 +38,4 @@
                 <p><?php echo T_("You have been redirected to this page because you attempted to access a function that is disabled in the demo."); ?></p>
                 <?php } ?>
             </div>
-        </div>
-    </body>
-</html>
+<?php require $prefix . '/templates/tiny_footer.inc.php'; ?>
