@@ -20,7 +20,7 @@
  *
  */
 
-require_once '../lib/init.php';
+require_once AmpConfig::get('prefix') . '/lib/init.php';
 
 echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 ?>
